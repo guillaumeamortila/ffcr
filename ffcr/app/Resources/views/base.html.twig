@@ -2,12 +2,35 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Cheese Rolling - Fédération Française de Cheese Rolling{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        <link rel="stylesheet" href="/css/style.css">
+
+        <script src="/js/jquery-3.2.1.js"></script>
+        <script src="/js/popper.min.js"></script>
+        <script src="/js/tether.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/js/script.js"></script>
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        <div class="navbar navbar-dark bg-dark mb-4 nav-pills nav-justified">
+            <a class="navbar-brand" href="/" style="line-height:1em;font-size:1.2rem">CHEESE ROLLING<br><span style="font-weight:200;letter-spacing:2px;font-size:1rem;">Fédération Française</span></a>
+            <div class="flex-lg-row">
+                <a class="navbar-brand" href="/mybooks"><i class="fa fa-book fa-1x" aria-hidden="true"></i>&nbsp;&nbsp;books</a>
+                <a class="navbar-brand" href="/#wifi"><i class="fa fa-wifi fa-1x" aria-hidden="true"></i>&nbsp;&nbsp;Wifi</a>
+            </div>
+        </div>
+        <div class="container">
+            {% block body %}{% endblock %}
+        </div>
+        <div class="footer flex-around position-relative">
+            <div class="footer-bloc"><a class="text-secondary" href="/"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a></div>
+            <div class="footer-bloc text-muted copyright font-weight-light">© Copyright FFCR 2018</div>
+            <div class="footer-bloc"><a class="text-secondary" href="/mybooks">My books</a></div>
+        </div>
     </body>
 </html>

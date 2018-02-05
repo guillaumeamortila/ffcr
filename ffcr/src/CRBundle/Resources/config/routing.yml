@@ -1,0 +1,3 @@
+cr_homepage:
+    path:     /
+    defaults: { _controller: CRBundle:Default:index }
