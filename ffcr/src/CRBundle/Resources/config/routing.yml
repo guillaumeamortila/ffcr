@@ -5,3 +5,7 @@ cr_homepage:
 cr_terrain:
     path: /terrain
     defaults: { _controller: CRBundle:Terrain:Terrain }
+
+cr_replay:
+    path: /replay
+    defaults: { _controller: CRBundle:Replay:Replay }
