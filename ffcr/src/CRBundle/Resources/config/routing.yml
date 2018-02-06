@@ -1,3 +1,7 @@
 cr_homepage:
     path:     /
     defaults: { _controller: CRBundle:Default:index }
+
+cr_terrain:
+    path: /terrain
+    defaults: { _controller: CRBundle:Terrain:Terrain }

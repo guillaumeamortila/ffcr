@@ -1,0 +1,26 @@
+{% extends "CRBundle::base.html.twig" %}
+
+{% block title %}{{ parent() }}{% endblock %}
+
+{% block content %}
+    <h1 class="my-4">Proposez un terrain à l'homologation de la FFCR</h1>
+
+    <form class="form-group">
+        <label for="nom">Nom</label>
+        <input type="text" name="nom" minlength="3" required placeholder="Nom" class="form-control" id="nom">
+
+        <label for="prenom">Prénom</label>
+        <input type="text" name="prenom" minlength="3" required placeholder="Prénom" class="form-control" id="prenom">
+
+        <label for="email">Email</label>
+        <input type="email" name="email" minlength="3" required placeholder="Email" class="form-control" id="email">
+
+        <label for="tel">Téléphone</label>
+        <input type="tel" name="tel" minlength="3" required placeholder="Numéro de téléphone" class="form-control" id="tel">
+
+        <label for="adresse">Adresse du terrain</label>
+        <input type="text" name="adresse" minlength="3" required placeholder="tel" class="form-control" id="adresse">
+
+        <input type="submit" class="btn btn-outline-success">
+    </form>
+{% endblock %}

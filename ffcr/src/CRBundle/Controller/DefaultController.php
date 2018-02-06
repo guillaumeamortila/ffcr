@@ -10,4 +10,6 @@ class DefaultController extends Controller
     {
         return $this->render('CRBundle:Default:index.html.twig');
     }
+
+
 }
