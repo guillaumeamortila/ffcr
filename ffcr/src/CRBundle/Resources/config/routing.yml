@@ -9,3 +9,7 @@ cr_terrain:
 cr_replay:
     path: /replay
     defaults: { _controller: CRBundle:Replay:Replay }
+
+cr_search:
+    path: /recherche
+    defaults: { _controller: CRBundle:Search:Search }
