@@ -1,3 +1,7 @@
 cr:
     resource: "@CRBundle/Resources/config/routing.yml"
     prefix:   /
+
+cr_presentation:
+    path: /presentation
+    defaults: { _controller: CRBundle:Presentation:Presentation }
