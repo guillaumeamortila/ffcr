@@ -4,7 +4,7 @@
 
 {% block content %}
     </div>
-    <div style="overflow: hidden" class="col-12 nopadding flex-center video">
+    <div style="overflow: hidden; height: 100vh; width: 100%" class="col-12 nopadding flex-center video">
         <video playsinline autoplay muted loop id="bgvid">
             <source src="{{ asset('video/home.mp4') }}" type="video/mp4">
         </video>
@@ -12,14 +12,35 @@
     <div class="container">
     <div style="text-align: center">
         <h2>Le concept</h2>
+        <p>
+            Chaque année, la célèbre Cheese Rolling Race a lieu à Brockworth, dans le Gloucestershire (Royaume-Uni).
+            La Fédération Française de Cheese Rolling célèbre cette tradition en organisant des courses inspirées de celle de Brockworth, dans toutes les régions française.
+            Le but est de créer un événement familiale à l’ambiance bon enfant, sans oublier la compétition.
+        </p>
     </div>
-
     <div style="text-align: center">
         <h2>Actualité</h2>
     </div>
 
     <div style="text-align: center">
-        <h2>Trouver un club</h2>
+        <h2>Nos Partenaires</h2>
+        <div id="sponsor flex">
+            <div>
+                <img class="logoSponsor" src="{{ asset('images/logo-president.png') }}">
+            </div>
+
+            <div>
+                <img class="logoSponsor" src="{{ asset('images/logo-president.png') }}">
+            </div>
+
+            <div>
+                <img class="logoSponsor" src="{{ asset('images/logo-president.png') }}">
+            </div>
+
+            <div>
+                <img class="logoSponsor" src="{{ asset('images/logo-president.png') }}">
+            </div>
+        </div>
     </div>
 
 {% endblock %}

@@ -56,3 +56,11 @@ video{
 body{
     color:white;
 }
+
+#sponsor{
+    background-color:white;
+}
+
+.logoSponsor{
+    width: 200px;
+}
