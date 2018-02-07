@@ -34,9 +34,15 @@
       <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/CRBundle/Resources/views/Default/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="40" column="58" lean-forward="false" selection-start-line="40" selection-start-column="58" selection-end-line="40" selection-end-column="58" />
-              <folding />
+            <state relative-caret-position="408">
+              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding>
+                <element signature="e#119#143#0#HTML" expanded="true" />
+                <element signature="e#390#416#0#HTML" expanded="true" />
+                <element signature="e#479#505#0#HTML" expanded="true" />
+                <element signature="e#567#593#0#HTML" expanded="true" />
+                <element signature="e#740#772#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -66,7 +72,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
               <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-              <folding />
+              <folding>
+                <marker date="1518009324097" expanded="true" signature="1863:1883" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -180,30 +188,6 @@
             <path>
               <item name="ffcr" type="b2602c69:ProjectViewProjectNode" />
               <item name="ffcr" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="ffcr" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ffcr" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="ffcr" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ffcr" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="ffcr" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ffcr" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="ffcr" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ffcr" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -307,15 +291,16 @@
       <workItem from="1517842025156" duration="3136000" />
       <workItem from="1517913192469" duration="4798000" />
       <workItem from="1517924729325" duration="7953000" />
-      <workItem from="1518008590999" duration="552000" />
+      <workItem from="1518008590999" duration="749000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16439000" />
+    <option name="totallyTimeSpent" value="16636000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="89" y="23" width="1303" height="830" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26016885" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -383,7 +368,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-          <folding />
+          <folding>
+            <marker date="1518009324097" expanded="true" signature="1863:1883" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -423,7 +410,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
           <caret line="40" column="58" lean-forward="true" selection-start-line="40" selection-start-column="58" selection-end-line="40" selection-end-column="58" />
-          <folding />
+          <folding>
+            <element signature="e#119#143#0#HTML" expanded="true" />
+            <element signature="e#390#416#0#HTML" expanded="true" />
+            <element signature="e#479#505#0#HTML" expanded="true" />
+            <element signature="e#567#593#0#HTML" expanded="true" />
+            <element signature="e#740#772#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -439,7 +432,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#119#143#0#HTML" expanded="true" />
+            <element signature="e#390#416#0#HTML" expanded="true" />
+            <element signature="e#479#505#0#HTML" expanded="true" />
+            <element signature="e#567#593#0#HTML" expanded="true" />
+            <element signature="e#740#772#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -455,7 +454,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1518009324097" expanded="true" signature="1863:1883" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -509,7 +510,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-          <folding />
+          <folding>
+            <element signature="e#119#143#0#HTML" expanded="true" />
+            <element signature="e#390#416#0#HTML" expanded="true" />
+            <element signature="e#479#505#0#HTML" expanded="true" />
+            <element signature="e#567#593#0#HTML" expanded="true" />
+            <element signature="e#740#772#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -539,6 +546,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -562,7 +570,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="100" lean-forward="false" selection-start-line="20" selection-start-column="100" selection-end-line="20" selection-end-column="100" />
-          <folding />
+          <folding>
+            <marker date="1518009324097" expanded="true" signature="1863:1883" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -592,6 +602,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -693,7 +704,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-          <folding />
+          <folding>
+            <marker date="1518009324097" expanded="true" signature="1863:1883" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -715,9 +728,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CRBundle/Resources/views/Default/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="58" lean-forward="false" selection-start-line="40" selection-start-column="58" selection-end-line="40" selection-end-column="58" />
-          <folding />
+        <state relative-caret-position="408">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <element signature="e#119#143#0#HTML" expanded="true" />
+            <element signature="e#390#416#0#HTML" expanded="true" />
+            <element signature="e#479#505#0#HTML" expanded="true" />
+            <element signature="e#567#593#0#HTML" expanded="true" />
+            <element signature="e#740#772#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

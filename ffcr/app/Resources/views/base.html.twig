@@ -17,19 +17,25 @@
         <script type="text/javascript" src="/js/script.js"></script>
     </head>
     <body>
-        <div class="navbar navbar-dark bg-dark mb-4 nav-pills nav-justified">
-            <a class="navbar-brand" href="/" style="line-height:1em;font-size:1.2rem">CHEESE ROLLING<br><span style="font-weight:200;letter-spacing:2px;font-size:1rem;">Fédération Française</span></a>
-            <div class="flex-lg-row">
-                <a class="navbar-brand" href="/mybooks"><i class="fa fa-book fa-1x" aria-hidden="true"></i>&nbsp;&nbsp;books</a>
-                <a class="navbar-brand" href="/#wifi"><i class="fa fa-wifi fa-1x" aria-hidden="true"></i>&nbsp;&nbsp;Wifi</a>
-            </div>
+        <div style="width: auto; margin:auto; text-align: center">
+            <img src="{{ asset('images/logo.png') }}" id="logo">
+        </div>
+        <div class="header flex-around position-relative">
+            <div><a href="{{ url('cr_homepage') }}">Acceuil</a></div>
+            <div><a href="#">Les clubs</a></div>
+            <div><a href="{{ url('cr_terrain') }}">Les terrains</a></div>
+            <div><a href="#">Les tournois</a></div>
+            <div><a href="{{ url('cr_replay') }}">Replay</a></div>
         </div>
         <div class="container">
             {% block body %}{% endblock %}
         </div>
         <div class="footer flex-around position-relative">
-            <div class="footer-bloc"><a class="text-secondary" href="/"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a></div>
-            <div class="footer-bloc text-muted copyright font-weight-light">© Copyright FFCR 2018</div>
+            <div><a href="#">Qu'est-ce que le cheese rolling ?</a></div>
+            <div><a href="{{ url('cr_search') }}">Les évènements</a></div>
+            <div><a href="{{ url('cr_replay') }}">Les replays</a></div>
+            <div><a href="{{ url('cr_terrain') }}">Soumettre mon terrain</a></div>
+            <div><a href="#">Mention légale</a></div>
         </div>
     </body>
 </html>

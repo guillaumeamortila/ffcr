@@ -3,7 +3,28 @@
 {% block title %}{{ parent() }}{% endblock %}
 
 {% block content %}
-    <h1 class="my-4">Let's roll the cheese !!</h1>
+
+    <div style="overflow: hidden" class="col-12 nopadding flex-center video">
+        <video playsinline autoplay muted loop id="bgvid">
+            <source src="{{ asset('video/home.mp4') }}" type="video/mp4">
+        </video>
+    </div>
+    <div class="container">
+        <div style="text-align: center">
+            <h2>Le concept</h2>
+        </div>
+
+        <div style="text-align: center">
+            <h2>Actualité</h2>
+        </div>
+
+        <div style="text-align: center">
+            <h2>Trouver un club</h2>
+        </div>
+    </div>
+
+
+        <h1 class="my-4">Let's roll the cheese !!</h1>
     <div id="google-map" style="height:600px;width:360px"></div>
     <script type="text/javascript">
         function initMap() {
