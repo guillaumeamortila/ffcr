@@ -3,11 +3,47 @@
 {% block title %}{{ parent() }}{% endblock %}
 
 {% block content %}
+    </div> <!--This div is needed in order to have the video in full screen, it closes the <div class="container"> -->
+    <div class="col-12 nopadding flex-center video">
+        <video playsinline autoplay muted loop id="bgvid">
+            <source src="{{ asset('video/home.mp4') }}" type="video/mp4">
+        </video>
+    </div>
+    <h1 id="h1Home">Vous allez mériter<br> votre fromage</h1>
+    <div class="container" style="margin-top:50vh;">
+        <div style="text-align: center" class="concept">
+            <h2>Le concept</h2>
+            <p>
+                Chaque année, la célèbre Cheese Rolling Race a lieu à Brockworth, dans le Gloucestershire (Royaume-Uni).
+                La Fédération Française de Cheese Rolling célèbre cette tradition en organisant des courses inspirées de celle de Brockworth, dans toutes les régions française.
+                Le but est de créer un événement familiale à l’ambiance bon enfant, sans oublier la compétition.
+            </p>
+        </div>
+        <div style="text-align: center">
+            <h2>Actualité</h2>
+        </div>
 
-    <div id="map-container">
-        <div id="google-map" style="height:400px;width:100%"></div>
-        <div>
-            <h3>Les courses en France</h3>
+        <div style="text-align: center">
+            <h2>Nos Partenaires</h2>
+
+            <div class="flex-around sponsor">
+                <div><img class="logoSponsor" src="{{ asset('images/logo-president.png') }}"></div>
+                <div><img class="logoSponsor" src="{{ asset('images/logo-entremont.png') }}"></div>
+                <div><img class="logoSponsor" src="{{ asset('images/logo-boursin.png') }}"></div>
+                <div><img class="logoSponsor" src="{{ asset('images/logo-babybel.png') }}"></div>
+            </div>
+            <div class="flex-around sponsor">
+                <div><img class="logoSponsor" src="{{ asset('images/logo-lyon.png') }}"></div>
+                <div><img class="logoSponsor" src="{{ asset('images/logo-richesmonts.png') }}"></div>
+                <div><img class="logoSponsor" src="{{ asset('images/logo-decathlon.png') }}"></div>
+                <div><img class="logoSponsor" src="{{ asset('images/logo-societe.png') }}"></div>
+            </div>
+        </div>
+        <div id="map-container">
+            <div>
+                <h3>Les courses en France</h3>
+            </div>
+            <div id="google-map" style="height:400px;width:100%"></div>
         </div>
     </div>
     <script type="text/javascript">
@@ -28,18 +64,17 @@
 
             var locations = [
                 {lat: 45.593721, lng: 6.769110},
-                {lat: -33.718234, lng: 150.363181},
-                {lat: -33.727111, lng: 150.371124},
+                {lat: 48.048239, lng: -0.830317},
+                {lat: 44.039365, lng: 1.520300},
                 {lat: -33.848588, lng: 151.209834}
-            ]
+            ];
 
             var infoContent = [
-                '<div id="content" class="text-dark"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Boursin Maurice</h1><div id="bodyContent"><p><b>Boursin Maurice</b>, also referred to as <b>Ayers Rock</b>, is a large sandstone rock formation in the southern part of the Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) south west of the nearest large town, Alice Springs; 450&#160;km (280&#160;mi) by road. Kata Tjuta and Uluru are the two major features of the Uluru - Kata Tjuta National Park.<p><a href="/presentation">Voir les détails de la course</a></p></div></div>',
-                '<div id="content" class="text-dark"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Bretagne Vikings</h1><div id="bodyContent"><p><b>Boursin Maurice</b>, also referred to as <b>Ayers Rock</b>, is a large sandstone rock formation in the southern part of the Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) south west of the nearest large town, Alice Springs; 450&#160;km (280&#160;mi) by road. Kata Tjuta and Uluru are the two major features of the Uluru - Kata Tjuta National Park.<p><a href="/presentation">Voir les détails de la course</a></p></div></div>',
-                '<div id="content" class="text-dark"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Boursin Maurice</h1><div id="bodyContent"><p><b>Boursin Maurice</b>, also referred to as <b>Ayers Rock</b>, is a large sandstone rock formation in the southern part of the Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) south west of the nearest large town, Alice Springs; 450&#160;km (280&#160;mi) by road. Kata Tjuta and Uluru are the two major features of the Uluru - Kata Tjuta National Park.<p><a href="/presentation">Voir les détails de la course</a></p></div></div>',
-                '<div id="content" class="text-dark"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Boursin Maurice</h1><div id="bodyContent"><p><b>Boursin Maurice</b>, also referred to as <b>Ayers Rock</b>, is a large sandstone rock formation in the southern part of the Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) south west of the nearest large town, Alice Springs; 450&#160;km (280&#160;mi) by road. Kata Tjuta and Uluru are the two major features of the Uluru - Kata Tjuta National Park.<p><a href="/presentation">Voir les détails de la course</a></p></div></div>',
-            ]
-
+                '<div id="content" class="text-dark"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Boursin Maurice</h1><div id="bodyContent"><p><b>Boursin Maurice</b><p>est une course de Cheese Rolling se déroulant à Bourg Saint Maurice et prennant place le 3 Juillet 2018 à 12h00, cette course fait partie du parcours de la coupe des 6 frommage<a href="/presentation">Voir les détails de la course</a></p></div></div>',
+                '<div id="content" class="text-dark"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">De l\'amont à Laval</h1><div id="bodyContent"><p><b>De l\'amont à Laval</b> est une course de Cheese Rolling se déroulant à Laval et prennant place le 5 Juin 2018 à 12h00, cette course fait partie du parcours de la coupe des 6 frommages<p><a href="/presentation">Voir les détails de la course</a></p></div></div>',
+                '<div id="content" class="text-dark"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Mont Tombant</h1><div id="bodyContent"><p><b>Mont Tombant</b> est une course de Cheese Rolling se déroulant à Montaubant et prennant place le 3 Mai 2018 à 12h00, cette course fait partie du parcours de la coupe des 6 frommages<p><a href="/presentation">Voir les détails de la course</a></p></div></div>',
+                '<div id="content" class="text-dark"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">De l\'amont à Laval</h1><div id="bodyContent"><p><b>De l\'amont à Laval</b> est une course de Cheese Rolling se déroulant à Laval et prennant place le 05 Juin 2018 à 12h00, cette course fait partie du parcours de la coupe des 6 frommages<p><a href="/presentation">Voir les détails de la course</a></p></div></div>',
+                ]
             var markers = locations.map(function(location, i) {
                 var marker = new google.maps.Marker({
                     position: location,
@@ -52,30 +87,22 @@
                 });
                 return marker;
             });
-
             var markerCluster = new MarkerClusterer(map, markers,
                 {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
-
-
         }
-
         var TILE_SIZE = 256;
-
         // The mapping between latitude, longitude and pixels is defined by the web
         // mercator projection.
         function project(latLng) {
             var siny = Math.sin(latLng.lat() * Math.PI / 180);
-
             // Truncating to 0.9999 effectively limits latitude to 89.189. This is
             // about a third of a tile past the edge of the world tile.
             siny = Math.min(Math.max(siny, -0.9999), 0.9999);
-
             return new google.maps.Point(
                 TILE_SIZE * (0.5 + latLng.lng() / 360),
                 TILE_SIZE * (0.5 - Math.log((1 + siny) / (1 - siny)) / (4 * Math.PI)));
         }
     </script>
-    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
-    </script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTRGK0p4ErH3dZZnbt31ycMe4VgX4-AQE&callback=initMap"></script>
 {% endblock %}
