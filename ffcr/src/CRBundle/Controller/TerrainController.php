@@ -15,10 +15,6 @@ class TerrainController extends Controller
         $piste = new Piste;
         $form = $this->get('form.factory')->create(PisteType::class, $piste);
 
-        $em = $this->getDoctrine()->getManager();
-        $pisteRepo = $em->getRepository('CRBundle:Piste');
-        $pistes = $pisteRepo->findAll(['id' => 'desc']);
-
         if ($request->isMethod('POST')) {
             $form->handleRequest($request);
             if ($form->isValid()) {
@@ -29,8 +25,7 @@ class TerrainController extends Controller
         }
 
         return $this->render('CRBundle:Default:terrain.html.twig', [
-            'newPisteForm' => $form->createView(),
-            'pistes' => $pistes
+            'newPisteForm' => $form->createView()
         ]);
 
     }

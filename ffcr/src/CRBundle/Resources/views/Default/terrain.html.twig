@@ -3,9 +3,25 @@
 {% block title %}{{ parent() }}{% endblock %}
 
 {% block content %}
-    <h1 class="my-4">Proposez un terrain à l'homologation de la FFCR</h1>
+    <h1 class="my-4">Proposez une course à l'homologation de la FFCR</h1>
 
     {{ form_start(newPisteForm, {'attr': {'class': 'form-horizontal form-piste'}}) }}
+    {{ form_label(newPisteForm.ville, "Ville, lieu* :", {'label_attr': {'class': ''}}) }}
+    {{ form_row(newPisteForm.ville) }}
+    {{ form_label(newPisteForm.nom, "Nom de la piste* :", {'label_attr': {'class': ''}}) }}
+    {{ form_row(newPisteForm.nom) }}
+    {{ form_label(newPisteForm.coordx, "Latitude (coordonnées exactes)* :", {'label_attr': {'class': ''}}) }}
+    {{ form_row(newPisteForm.coordx) }}
+    {{ form_label(newPisteForm.coordy, "Longitude (coordonnées exactes)* :", {'label_attr': {'class': ''}}) }}
+    {{ form_row(newPisteForm.coordy) }}
+    {{ form_label(newPisteForm.cheese, "Fromage sponsor* :", {'label_attr': {'class': ''}}) }}
+    {{ form_row(newPisteForm.cheese) }}
+    {{ form_label(newPisteForm.level, "Difficulté de la course* :", {'label_attr': {'class': ''}}) }}
+    {{ form_row(newPisteForm.level) }}
+    {{ form_label(newPisteForm.description, "Description de la course* :", {'label_attr': {'class': ''}}) }}
+    {{ form_row(newPisteForm.description) }}
+    {{ form_label(newPisteForm.date, "Date de la course* :", {'label_attr': {'class': ''}}) }}
+    {{ form_row(newPisteForm.date) }}
     {{ form_errors(newPisteForm) }}
     {{ form_rest(newPisteForm) }}
     {{ form_end(newPisteForm) }}

@@ -29,9 +29,9 @@ class Piste
     private $ville;
 
     /**
-     * @var int
+     * @var string
      *
-     * @ORM\Column(name="level", type="integer")
+     * @ORM\Column(name="level", type="string", length=255)
      */
     private $level;
 
@@ -63,6 +63,19 @@ class Piste
      */
     private $cheese;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="string", length=255)
+     */
+    private $description;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date", type="date")
+     */
+    private $date;
 
     /**
      * @ORM\OneToOne(targetEntity="CRBundle\Entity\Course", mappedBy="piste")
@@ -106,7 +119,7 @@ class Piste
     /**
      * Set level
      *
-     * @param integer $level
+     * @param string $level
      *
      * @return Piste
      */
@@ -120,7 +133,7 @@ class Piste
     /**
      * Get level
      *
-     * @return int
+     * @return string
      */
     public function getLevel()
     {
@@ -245,5 +258,54 @@ class Piste
     public function getCourses()
     {
         return $this->courses;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return Piste
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+
+    /**
+     * Set date
+     *
+     * @param \DateTime $date
+     *
+     * @return Piste
+     */
+    public function setDate($date)
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
+    /**
+     * Get date
+     *
+     * @return \DateTime
+     */
+    public function getDate()
+    {
+        return $this->date;
     }
 }

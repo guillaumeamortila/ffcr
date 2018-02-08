@@ -10,7 +10,7 @@
         </video>
     </div>
     <h1 id="h1Home">Vous allez mériter<br> votre fromage</h1>
-    <div class="container" style="margin-top:50vh;">
+    <div id="hp-container" class="container" style="margin-top:50vh;">
         <div style="text-align: center" class="concept">
             <h2>Le concept</h2>
             <p>
@@ -41,14 +41,13 @@
         </div>
         <div id="map-container">
             <div>
-                <h3>Les courses en France</h3>
+                <h2>Les prochaines courses en France !!</h2>
             </div>
             <div id="google-map" style="height:400px;width:100%"></div>
         </div>
     </div>
     <script type="text/javascript">
         function initMap() {
-            var course1 = new google.maps.LatLng(45.593721, 6.769110);
 
             var france = new google.maps.LatLng(46.814461, 1.607263);
 
@@ -63,21 +62,32 @@
             });*/
 
             var locations = [
+                {% for piste in pistes %}
+                {lat: {{ piste.coordx }}, lng: {{ piste.coordy }} },
+                {% endfor %}
+            ];
+            /*var locations = [
                 {lat: 45.593721, lng: 6.769110},
                 {lat: 48.048239, lng: -0.830317},
                 {lat: 44.039365, lng: 1.520300},
-                {lat: -33.848588, lng: 151.209834}
-            ];
+            ]*/
+
 
             var infoContent = [
+                {% for piste in pistes %}
+                '<div id="content" class="text-dark"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">{{ piste.nom }}</h1><div id="bodyContent"><p class="mb-2">{{ piste.description }}</p><p class="mb-2">Lieu : <b>{{ piste.ville }}</b><br>Difficulté : <b>{{ piste.level }}</b><br>{% if piste.cheese %}Fromage : <b>{{ piste.cheese }}</b>{% endif %}<br>Date : <b>{{ piste.date|date("F jS \\a\\t g:ia") }}</b></p><a href="/presentation">Voir les détails de la course</a></div></div>',
+                {% endfor %}
+            ]
+            /*var infoContent = [
                 '<div id="content" class="text-dark"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Boursin Maurice</h1><div id="bodyContent"><p><b>Boursin Maurice</b><p>est une course de Cheese Rolling se déroulant à Bourg Saint Maurice et prennant place le 3 Juillet 2018 à 12h00, cette course fait partie du parcours de la coupe des 6 frommage<a href="/presentation">Voir les détails de la course</a></p></div></div>',
                 '<div id="content" class="text-dark"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">De l\'amont à Laval</h1><div id="bodyContent"><p><b>De l\'amont à Laval</b> est une course de Cheese Rolling se déroulant à Laval et prennant place le 5 Juin 2018 à 12h00, cette course fait partie du parcours de la coupe des 6 frommages<p><a href="/presentation">Voir les détails de la course</a></p></div></div>',
                 '<div id="content" class="text-dark"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Mont Tombant</h1><div id="bodyContent"><p><b>Mont Tombant</b> est une course de Cheese Rolling se déroulant à Montaubant et prennant place le 3 Mai 2018 à 12h00, cette course fait partie du parcours de la coupe des 6 frommages<p><a href="/presentation">Voir les détails de la course</a></p></div></div>',
-                '<div id="content" class="text-dark"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">De l\'amont à Laval</h1><div id="bodyContent"><p><b>De l\'amont à Laval</b> est une course de Cheese Rolling se déroulant à Laval et prennant place le 05 Juin 2018 à 12h00, cette course fait partie du parcours de la coupe des 6 frommages<p><a href="/presentation">Voir les détails de la course</a></p></div></div>',
-                ]
+                ]*/
+
             var markers = locations.map(function(location, i) {
                 var marker = new google.maps.Marker({
                     position: location,
+                    icon: '/images/cheese-mini.png'
                     //label: labels[i]
                 });
                 marker.addListener('click', function() {

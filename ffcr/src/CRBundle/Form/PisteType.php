@@ -3,7 +3,9 @@
 namespace CRBundle\Form;
 
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -16,18 +18,20 @@ class PisteType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('ville', TextType::class, ['attr' => ['placeholder' => 'Nom de la ville, du lieu *']])
-            ->add('nom', TextType::class, ['attr' => ['placeholder' => 'Nom de la piste *']])
-            ->add('coordx', TextType::class, ['attr' => ['placeholder' => 'Latitude (Coordonnées exactes) *']])
-            ->add('coordy', TextType::class, ['attr' => ['placeholder' => 'Longitude (Coordonnées exactes) *']])
-            ->add('cheese', TextType::class, ['required' => false, 'attr' => ['placeholder' => 'Fromage sponsor']])
-            ->add('level', ChoiceType::class, array(
-                'choices' => array('Blanche' => 0, 'Verte' => 1, 'Bleue' => 2, 'Rouge' => 3, 'Noire' => 4)
+        $builder->add('ville', TextType::class, ['label' => false])
+            ->add('nom', TextType::class, ['label' => false])
+            ->add('coordx', TextType::class, ['label' => false])
+            ->add('coordy', TextType::class, ['label' => false])
+            ->add('cheese', TextType::class, ['label' => false, 'required' => false])
+            ->add('level', ChoiceType::class, array('label' => false,
+                'choices' => array('Blanche' => 'blanche', 'Verte' => 'verte', 'Bleue' => 'bleue', 'Rouge' => 'rouge', 'Noire' => 'noire')
             ))
+            ->add('description', TextareaType::class, ['label' => false])
+            ->add('date', DateType::class, ['label' => false])
             ->add('Soumettre', SubmitType::class, ['attr' => ['class' => 'form-control btn btn-success']]);
 
     }
-    
+
     /**
      * {@inheritdoc}
      */
