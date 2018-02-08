@@ -2,14 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5832f5f-30f7-4208-8e03-807d877865a1" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/ffcr/src/CRBundle/Entity/User.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ffcr/src/CRBundle/Repository/UserRepository.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/ffcr/src/CRBundle/Form/PisteType.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/ffcr/src/CRBundle/Form/UserType.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/ffcr/.idea/workspace.xml" afterPath="$PROJECT_DIR$/ffcr/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/ffcr/app/config/config.yml" afterPath="$PROJECT_DIR$/ffcr/app/config/config.yml" />
+      <change beforePath="$PROJECT_DIR$/ffcr/src/CRBundle/Controller/TerrainController.php" afterPath="$PROJECT_DIR$/ffcr/src/CRBundle/Controller/TerrainController.php" />
       <change beforePath="$PROJECT_DIR$/ffcr/src/CRBundle/Entity/Course.php" afterPath="$PROJECT_DIR$/ffcr/src/CRBundle/Entity/Course.php" />
       <change beforePath="$PROJECT_DIR$/ffcr/src/CRBundle/Entity/Piste.php" afterPath="$PROJECT_DIR$/ffcr/src/CRBundle/Entity/Piste.php" />
+      <change beforePath="$PROJECT_DIR$/ffcr/src/CRBundle/Entity/User.php" afterPath="$PROJECT_DIR$/ffcr/src/CRBundle/Entity/User.php" />
       <change beforePath="$PROJECT_DIR$/ffcr/src/CRBundle/Resources/views/Default/index.html.twig" afterPath="$PROJECT_DIR$/ffcr/src/CRBundle/Resources/views/Default/index.html.twig" />
-      <change beforePath="$PROJECT_DIR$/ffcr/web/css/style.css" afterPath="$PROJECT_DIR$/ffcr/web/css/style.css" />
+      <change beforePath="$PROJECT_DIR$/ffcr/src/CRBundle/Resources/views/Default/search.html.twig" afterPath="$PROJECT_DIR$/ffcr/src/CRBundle/Resources/views/Default/search.html.twig" />
+      <change beforePath="$PROJECT_DIR$/ffcr/src/CRBundle/Resources/views/Default/terrain.html.twig" afterPath="$PROJECT_DIR$/ffcr/src/CRBundle/Resources/views/Default/terrain.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,11 +30,10 @@
       <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ffcr/src/CRBundle/Resources/views/Default/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="90" column="44" lean-forward="false" selection-start-line="90" selection-start-column="44" selection-end-line="90" selection-end-column="44" />
+            <state relative-caret-position="650">
+              <caret line="67" column="46" lean-forward="false" selection-start-line="67" selection-start-column="46" selection-end-line="67" selection-end-column="46" />
               <folding>
                 <element signature="e#531#555#0#HTML" expanded="true" />
-                <element signature="e#2359#2390#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -130,7 +133,7 @@
       <path value="$PROJECT_DIR$/ffcr/vendor/psr/link" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="174" />
     <option name="y" value="378" />
     <option name="width" value="1307" />
@@ -243,15 +246,15 @@
       <workItem from="1517845936209" duration="218000" />
       <workItem from="1517994166637" duration="3041000" />
       <workItem from="1517997569010" duration="6065000" />
-      <workItem from="1518078510125" duration="9499000" />
+      <workItem from="1518078510125" duration="10517000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25358000" />
+    <option name="totallyTimeSpent" value="26376000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1042" extended-state="7" />
+    <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26324326" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -433,11 +436,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ffcr/src/CRBundle/Resources/views/Default/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="90" column="44" lean-forward="false" selection-start-line="90" selection-start-column="44" selection-end-line="90" selection-end-column="44" />
+        <state relative-caret-position="650">
+          <caret line="67" column="46" lean-forward="false" selection-start-line="67" selection-start-column="46" selection-end-line="67" selection-end-column="46" />
           <folding>
             <element signature="e#531#555#0#HTML" expanded="true" />
-            <element signature="e#2359#2390#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

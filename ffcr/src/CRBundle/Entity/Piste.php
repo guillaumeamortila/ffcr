@@ -65,7 +65,7 @@ class Piste
 
 
     /**
-     * @ORM\OneToOne(targetEntity="EEMI\CRBundle\Entity\Course", mappedBy="piste")
+     * @ORM\OneToOne(targetEntity="CRBundle\Entity\Course", mappedBy="piste")
      */
     private $courses;
 

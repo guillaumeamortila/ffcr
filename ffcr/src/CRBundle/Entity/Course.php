@@ -36,7 +36,7 @@ class Course
     private $date;
 
     /**
-     * @ORM\ManyToOne(targetEntity="EEMI\DevoirBundle\Entity\Piste", inversedBy="courses")
+     * @ORM\ManyToOne(targetEntity="CRBundle\Entity\Piste", inversedBy="courses")
      */
     private $piste;
 
