@@ -12,28 +12,60 @@
     <h1 id="h1Home">Vous allez mériter<br> votre fromage</h1>
     <div id="hp-container" class="container" style="margin-top:120px;">
         <div style="text-align: center" class="concept">
-            <h2><img src="{{ asset('images/cheese-puce.png') }}"> &nbsp;Le concept</h2>
-            <p>
+            <h2><img src="{{ asset('images/cheese-puce.png') }}">Le concept</h2>
+            <p id="desc-para">
                 Chaque année, la célèbre Cheese Rolling Race a lieu à Brockworth, dans le Gloucestershire (Royaume-Uni).
                 La Fédération Française de Cheese Rolling célèbre cette tradition en organisant des courses inspirées de celle de Brockworth, dans toutes les régions française.
                 Le but est de créer un événement familiale à l’ambiance bon enfant, sans oublier la compétition.
             </p>
         </div>
         <div style="text-align: center">
-            <h2><img src="{{ asset('images/cheese-puce.png') }}"> &nbsp;Prochain match à {{ pistes[0].ville }} le 15/03/2018</h2>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus earum eligendi error ex, facere facilis nam odio pariatur placeat, possimus provident quaerat quas repellat sint veritatis! At doloremque et quisquam.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias aliquid amet at aut cupiditate eum, ex minus mollitia porro repellendus sunt tempore temporibus. Aliquid architecto eos eveniet reiciendis voluptates.
+            <h2><img src="{{ asset('images/run.svg') }}">Prochaine course à {{ pistes[0].ville }} le {{ pistes[0].date|date('d/m/Y') }}</h2>
+            <p>
+                {{ pistes[0].description }}
+            </p>
             <div class="buttonContainer flex-around">
                 <button class="btn button">Participer</button>
                 <button class="btn button">Parier</button>
             </div>
         </div>
         <div style="text-align: center">
-            <h2>Actualité</h2>
+            <h2><img src="{{ asset('images/news.svg') }}">Actualité</h2>
+            <div class="actu-ctnr d-flex justify-content-between">
+                <div>
+                    <div class="actu-img"><img src="http://www.soglos.com/showimage.ashx?name=admin%2F11+sport+outdoor%2Fsg_sport_cheeserolling2017_eel.jpg"></div>
+                    <h4>La première piste de cheese rolling Inaugurée !</h4>
+                    <p>
+                        La ministre des sport a inauguré la piste de Chamonix hier, et a ainsi démarré la saison.
+                        Accompagnée des représentants de la Fédération, Laura Tulaine la présidente de la fédération a déclaré ...
+                    </p>
+                </div>
+                <div>
+                    <div class="actu-img"><img src="http://www.soglos.com/showimage.ashx?name=admin%2F11+sport+outdoor%2Fsg_sport_cheeserolling2017_eel.jpg"></div>
+                    <h4>La première piste de cheese rolling Inauguré !</h4>
+                    <p>
+                        La ministre des sport inauguré la piste de Chamonix hier, et a ainsi démarré la saison.
+                        Accompagné des représentants de la Fédération, Laura Fessel à pus participer à une course et déclaré : “ce sport est assez technique et compétitif, je vais tout faire pour qu’il soit au Jeux Olympique ! “
+                    </p>
+                </div>
+                <div>
+                    <div class="actu-img"><img src="http://www.soglos.com/showimage.ashx?name=admin%2F11+sport+outdoor%2Fsg_sport_cheeserolling2017_eel.jpg"></div>
+                    <h4>La première piste de cheese rolling Inauguré !</h4>
+                    <p>
+                        La ministre des sport inauguré la piste de Chamonix hier, et a ainsi démarré la saison.
+                        Accompagné des représentants de la Fédération, Laura Fessel à pus participer à une course et déclaré : “ce sport est assez technique et compétitif, je vais tout faire pour qu’il soit au Jeux Olympique ! “
+                    </p>
+                </div>
+            </div>
         </div>
-
+        <div id="map-container">
+            <div class="text-center">
+                <h2><img src="{{ asset('images/cheese.svg') }}">Les courses à venir en France !!</h2>
+            </div>
+            <div id="google-map" style="height:400px;width:100%"></div>
+        </div>
         <div style="text-align: center">
-            <h2>Nos Partenaires</h2>
+            <h2><img src="{{ asset('images/star.svg') }}">Nos Partenaires</h2>
 
             <div class="flex-around sponsor">
                 <div><img class="logoSponsor" src="{{ asset('images/logo-president.png') }}"></div>
@@ -47,12 +79,6 @@
                 <div><img class="logoSponsor" src="{{ asset('images/logo-decathlon.png') }}"></div>
                 <div><img class="logoSponsor" src="{{ asset('images/logo-societe.png') }}"></div>
             </div>
-        </div>
-        <div id="map-container">
-            <div class="text-center">
-                <h2>Les prochaines courses en France !!</h2>
-            </div>
-            <div id="google-map" style="height:400px;width:100%"></div>
         </div>
     </div>
     <script type="text/javascript">
@@ -84,7 +110,7 @@
 
             var infoContent = [
                 {% for piste in pistes %}
-                '<div id="content" class="text-dark"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">{{ piste.nom }}</h1><div id="bodyContent"><p class="mb-2">{{ piste.description }}</p><p class="mb-2">Lieu : <b>{{ piste.ville }}</b><br>Difficulté : <b>{{ piste.level }}</b><br>{% if piste.cheese %}Fromage : <b>{{ piste.cheese }}</b>{% endif %}<br>Date : <b>{{ piste.date|date("F jS \\a\\t g:ia") }}</b></p><a href="/presentation">Voir les détails de la course</a></div></div>',
+                '<div id="content" class="text-dark"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">{{ piste.nom }}</h1><div id="bodyContent"><p class="mb-2">{{ piste.description }}</p><p class="mb-2">Lieu : <b>{{ piste.ville }}</b><br>Date : <b>{{ piste.date|date("\\l\\e j/m/Y \\à g:i") }}</b><br>Difficulté : <b>piste {{ piste.level }}</b><br>{% if piste.cheese %}Fromage : <b>{{ piste.cheese }}</b>{% endif %}</p><a href="/presentation">Voir les détails de la course</a></div></div>',
                 {% endfor %}
             ]
             /*var infoContent = [

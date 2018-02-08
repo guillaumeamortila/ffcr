@@ -110,10 +110,23 @@ video{
     width: 200px;
     height: 50px;
     border-radius: 50px;
+    background-color: #f5d961;
+    color: #FFF;
+    font-family:Bangers;
+    letter-spacing:2px;
+    font-size:1.6em;
+    transition-duration: .1s;
+}
+.button:hover{
+    background-color: #EBC34C;
+    cursor:pointer;
+}
+.button:active{
+    outline:none;
 }
 
 .buttonContainer{
-    padding-top: 50px;
+    padding: 20px;
     width: 700px;
     margin:auto;
     display: flex;
@@ -121,4 +134,42 @@ video{
 
 #google-map{
     margin-bottom: 30px;
+    box-shadow: 12px 10px 2px #EBC34C, -4px 0 30px rgba(0,0,0,0.09);
+    border-radius: 3px;
+    margin: 34px 0 80px 0;
+}
+
+#desc-para {
+    font-size: 1.2em;
+    font-style: italic;
+    width: 66%;
+    margin-left: 18%;
+}
+#desc-para::first-letter {
+    font-size: 1.6em;
+    font-weight: 800;
+    line-height: 1em;
+}
+
+#hp-container h2 > img {
+    height: 36px;
+    width: 36px;
+    margin-bottom: 2px;
+    margin-right: 20px;
+}
+
+.actu-ctnr{
+    margin: 34px 0 80px 0;
+}
+.actu-ctnr > div{
+    width: 30%;
+    box-shadow: 12px 10px 2px #EBC34C, -4px 0 30px rgba(0,0,0,0.09);
+    border-radius: 3px;
+}
+.actu-img{
+    overflow:hidden;
+    height: 200px;
+}
+.actu-img img{
+    width: 100%;
 }

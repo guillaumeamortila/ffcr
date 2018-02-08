@@ -29,7 +29,7 @@ class DefaultController extends Controller
         SELECT *
         FROM piste p
         WHERE p.date > NOW()
-        ORDER BY p.date DESC
+        ORDER BY p.date ASC
         ';
         $stmt = $conn->prepare($sql);
         $stmt->execute();
