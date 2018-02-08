@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Bangers');
+
 .flex-center{
     display: flex;
     flex-direction: column;
     justify-content:center;
     align-items: center;
 }
+
 .flex-center-text{
     display: flex;
     flex-direction: column;
@@ -11,21 +14,25 @@
     align-items: center;
     text-align: center;
 }
+
 .flex-around{
     display: flex;
     justify-content:space-around;
     align-items: center;
     text-align: center;
 }
+
 .footer{
-    position: absolute;
+    position: fixed;
     bottom: 0;
     padding: 40px;
     background-color: #4b6584;
 }
+
 .footer a{
     color: white;
 }
+
 .header{
     width: 60% !important;
     margin:auto !important;
@@ -33,12 +40,16 @@
 
 .header a{
     color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 20px black;
 }
 
 
 .nopadding{
     padding: 0!important;
 }
+
 video{
     width: 100%;
 }
@@ -47,20 +58,32 @@ video{
     width:100px;
     height: 100px;
 }
+
 .video{
+    height: 100vh;
+    background-color: black;
     position: absolute;
     z-index: -1;
     top:0;
+    opacity: 0.9;
+    overflow: hidden;
 }
 
-body{
-    color:white;
-}
-
-#sponsor{
-    background-color:white;
+.sponsor{
+    margin-top: 3%;
 }
 
 .logoSponsor{
-    width: 200px;
+    display:inline !important;
+    width: 150px;
+}
+
+#h1Home{
+    font-family: 'Bangers', cursive;
+    font-size: 5rem;
+    color: #ffc312;
+    position: relative;
+    top: 40vh;
+    text-align: center;
+    z-index: 3;
 }

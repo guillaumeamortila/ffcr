@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5832f5f-30f7-4208-8e03-807d877865a1" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/ffcr/src/CRBundle/Entity/Course.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ffcr/src/CRBundle/Entity/Piste.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ffcr/src/CRBundle/Repository/CourseRepository.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ffcr/src/CRBundle/Repository/PisteRepository.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/ffcr/src/CRBundle/Entity/User.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/ffcr/src/CRBundle/Repository/UserRepository.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/ffcr/.idea/ffcr.iml" afterPath="$PROJECT_DIR$/ffcr/.idea/ffcr.iml" />
       <change beforePath="$PROJECT_DIR$/ffcr/.idea/workspace.xml" afterPath="$PROJECT_DIR$/ffcr/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/ffcr/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/ffcr/app/Resources/views/base.html.twig" />
+      <change beforePath="$PROJECT_DIR$/ffcr/src/CRBundle/Entity/Course.php" afterPath="$PROJECT_DIR$/ffcr/src/CRBundle/Entity/Course.php" />
+      <change beforePath="$PROJECT_DIR$/ffcr/src/CRBundle/Entity/Piste.php" afterPath="$PROJECT_DIR$/ffcr/src/CRBundle/Entity/Piste.php" />
       <change beforePath="$PROJECT_DIR$/ffcr/src/CRBundle/Resources/views/Default/index.html.twig" afterPath="$PROJECT_DIR$/ffcr/src/CRBundle/Resources/views/Default/index.html.twig" />
+      <change beforePath="$PROJECT_DIR$/ffcr/web/css/style.css" afterPath="$PROJECT_DIR$/ffcr/web/css/style.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,21 +23,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ffcr/src/CRBundle/Resources/views/Default/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-              <folding />
+            <state relative-caret-position="277">
+              <caret line="90" column="44" lean-forward="false" selection-start-line="90" selection-start-column="44" selection-end-line="90" selection-end-column="44" />
+              <folding>
+                <element signature="e#531#555#0#HTML" expanded="true" />
+                <element signature="e#2359#2390#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ffcr/web/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="511">
-              <caret line="49" column="7" lean-forward="false" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
+            <state relative-caret-position="1239">
+              <caret line="67" column="16" lean-forward="false" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -47,8 +49,8 @@
       <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ffcr/app/Resources/views/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="23" column="44" lean-forward="false" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+            <state relative-caret-position="832">
+              <caret line="32" column="56" lean-forward="false" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -59,6 +61,10 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>position re</find>
+      <find>&lt;/div</find>
+      <find>relative</find>
+      <find>vh</find>
+      <find>opac</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -124,7 +130,7 @@
       <path value="$PROJECT_DIR$/ffcr/vendor/psr/link" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="174" />
     <option name="y" value="378" />
     <option name="width" value="1307" />
@@ -170,6 +176,19 @@
               <item name="ffcr" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="CRBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="ffcr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ffcr" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ffcr" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="ffcr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ffcr" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ffcr" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="images" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -224,15 +243,15 @@
       <workItem from="1517845936209" duration="218000" />
       <workItem from="1517994166637" duration="3041000" />
       <workItem from="1517997569010" duration="6065000" />
-      <workItem from="1518078510125" duration="301000" />
+      <workItem from="1518078510125" duration="9499000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16160000" />
+    <option name="totallyTimeSpent" value="25358000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
+    <frame x="-11" y="-11" width="1942" height="1042" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26324326" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -266,7 +285,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/config/services.yml" />
     <entry file="file://$PROJECT_DIR$/src/CRBundle/Controller/DefaultController.php" />
     <entry file="file://$PROJECT_DIR$/src/CRBundle/Resources/views/Default/index.html.twig" />
     <entry file="file://$PROJECT_DIR$/src/CRBundle/Resources/views/base.html.twig" />
@@ -380,27 +398,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ffcr/web/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="5" column="109797" lean-forward="false" selection-start-line="5" selection-start-column="109797" selection-end-line="5" selection-end-column="109797" />
+          <folding>
+            <element signature="e#51727#51927#2" expanded="false" />
+            <element signature="e#52049#52198#2" expanded="false" />
+            <element signature="e#52344#52490#2" expanded="false" />
+            <element signature="e#52915#53078#1" expanded="false" />
+            <element signature="e#62330#62573#2" expanded="false" />
+            <element signature="e#63440#63689#2" expanded="false" />
+            <element signature="e#89389#89579#2" expanded="false" />
+            <element signature="e#89625#89815#2" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ffcr/web/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1239">
+          <caret line="67" column="16" lean-forward="false" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ffcr/app/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="23" column="44" lean-forward="false" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+        <state relative-caret-position="832">
+          <caret line="32" column="56" lean-forward="false" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ffcr/src/CRBundle/Resources/views/Default/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ffcr/web/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="49" column="7" lean-forward="false" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
-          <folding />
+        <state relative-caret-position="277">
+          <caret line="90" column="44" lean-forward="false" selection-start-line="90" selection-start-column="44" selection-end-line="90" selection-end-column="44" />
+          <folding>
+            <element signature="e#531#555#0#HTML" expanded="true" />
+            <element signature="e#2359#2390#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

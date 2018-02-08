@@ -3,71 +3,132 @@
 {% block title %}{{ parent() }}{% endblock %}
 
 {% block content %}
-    <div style="overflow: hidden" class="col-12 nopadding flex-center video">
+    </div> <!--This div is needed in order to have the video in full screen, it closes the <div class="container"> -->
+    <div class="col-12 nopadding flex-center video">
         <video playsinline autoplay muted loop id="bgvid">
             <source src="{{ asset('video/home.mp4') }}" type="video/mp4">
         </video>
     </div>
-    <div class="container">
-    <div style="text-align: center">
-        <h2>Le concept</h2>
-        <p>
-            Chaque année, la célèbre Cheese Rolling Race a lieu à Brockworth, dans le Gloucestershire (Royaume-Uni).
-            La Fédération Française de Cheese Rolling célèbre cette tradition en organisant des courses inspirées de celle de Brockworth, dans toutes les régions française.
-            Le but est de créer un événement familiale à l’ambiance bon enfant, sans oublier la compétition.
-        </p>
-    </div>
-    <div style="text-align: center">
-        <h2>Actualité</h2>
-    </div>
+    <h1 id="h1Home">Vous allez mériter<br> votre fromage</h1>
+    <div class="container" style="margin-top:50vh;">
+        <div style="text-align: center" class="concept">
+            <h2>Le concept</h2>
+            <p>
+                Chaque année, la célèbre Cheese Rolling Race a lieu à Brockworth, dans le Gloucestershire (Royaume-Uni).
+                La Fédération Française de Cheese Rolling célèbre cette tradition en organisant des courses inspirées de celle de Brockworth, dans toutes les régions française.
+                Le but est de créer un événement familiale à l’ambiance bon enfant, sans oublier la compétition.
+            </p>
+        </div>
+        <div style="text-align: center">
+            <h2>Actualité</h2>
+        </div>
 
-    <div style="text-align: center">
-        <h2>Nos Partenaires</h2>
-        <div id="sponsor flex">
-            <div>
-                <img class="logoSponsor" src="{{ asset('images/logo-president.png') }}">
+        <div style="text-align: center">
+            <h2>Nos Partenaires</h2>
+
+            <div class="flex-around sponsor">
+                <div><img class="logoSponsor" src="{{ asset('images/logo-president.png') }}"></div>
+                <div><img class="logoSponsor" src="{{ asset('images/logo-entremont.png') }}"></div>
+                <div><img class="logoSponsor" src="{{ asset('images/logo-boursin.png') }}"></div>
+                <div><img class="logoSponsor" src="{{ asset('images/logo-babybel.png') }}"></div>
             </div>
-
-            <div>
-                <img class="logoSponsor" src="{{ asset('images/logo-president.png') }}">
-            </div>
-
-            <div>
-                <img class="logoSponsor" src="{{ asset('images/logo-president.png') }}">
-            </div>
-
-            <div>
-                <img class="logoSponsor" src="{{ asset('images/logo-president.png') }}">
+            <div class="flex-around sponsor">
+                <div><img class="logoSponsor" src="{{ asset('images/logo-lyon.png') }}"></div>
+                <div><img class="logoSponsor" src="{{ asset('images/logo-richesmonts.png') }}"></div>
+                <div><img class="logoSponsor" src="{{ asset('images/logo-decathlon.png') }}"></div>
+                <div><img class="logoSponsor" src="{{ asset('images/logo-societe.png') }}"></div>
             </div>
         </div>
+
+        <div id="map-container">
+            <div>
+                <h3>Les courses en France</h3>
+            </div>
+            <div id="google-map" style="height:400px;width:100%"></div>
+        </div>
     </div>
-
-
-        <h1 class="my-4">Let's roll the cheese !!</h1>
-    <div id="google-map" style="height:600px;width:360px"></div>
     <script type="text/javascript">
         function initMap() {
-            var chicago = new google.maps.LatLng(41.850, -87.650);
+            var course1 = new google.maps.LatLng(45.593721, 6.769110);
+
+            var france = new google.maps.LatLng(46.814461, 1.607263);
 
             var map = new google.maps.Map(document.getElementById('google-map'), {
-                center: chicago,
-                zoom: 3
+                center: france,
+                zoom: 5
             });
 
-            var coordInfoWindow = new google.maps.InfoWindow();
-            coordInfoWindow.setContent(createInfoWindowContent(chicago, map.getZoom()));
-            coordInfoWindow.setPosition(chicago);
-            coordInfoWindow.open(map);
+            /*var coordInfoWindow = new google.maps.InfoWindow();
+            coordInfoWindow.setContent(createInfoWindowContent(course1, map.getZoom()));
+            coordInfoWindow.setPosition(course1);
+            coordInfoWindow.open(map);*/
 
-            map.addListener('zoom_changed', function() {
-                coordInfoWindow.setContent(createInfoWindowContent(chicago, map.getZoom()));
+            /*map.addListener('zoom_changed', function() {
+                coordInfoWindow.setContent(createInfoWindowContent(course1, map.getZoom()));
                 coordInfoWindow.open(map);
+            });*/
+
+            var locations = [
+                {lat: 45.593721, lng: 6.769110},
+                {lat: 48.048239, lng: -0.830317},
+                {lat: -33.727111, lng: 150.371124},
+                {lat: -33.848588, lng: 151.209834}
+            ]
+
+            var labels = [
+                "Bg St Maurice",
+                "De l'amont à Laval",
+                "Course 3",
+                "Course 4"
+            ]
+
+            var markers = locations.map(function(location, i) {
+                var marker = new google.maps.Marker({
+                    position: location,
+                    label: labels[i]
+                });
+                marker.addListener('click', function() {
+                    console.log(marker.label);
+                    infowindow.open(map, marker);
+                });
+                return marker;
             });
+
+            var markerCluster = new MarkerClusterer(map, markers,
+                {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+
+            var contentString = '<div id="content" class="text-dark">'+
+                '<div id="siteNotice">'+
+                '</div>'+
+                '<h1 id="firstHeading" class="firstHeading">Boursin Maurice</h1>'+
+                '<div id="bodyContent">'+
+                '<p><b>Boursin Maurice</b> est une course prenant place à Bourg Saint Maurice' +
+                ' et est sponsorisée par Boursin, la course prends place le 05 Juin 2018 à 12h00 pour sa' +
+                ' première édition</p>'+
+                '<p><a href="/presentation">Voir les détails de la course</a></p>'+
+                '</div>'+
+                '</div>';
+
+            var content = [1,2,3,4];
+            function getContent(i){
+                content: content[1];
+                console.log(content[i]);
+            }
+
+
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString
+            });
+
+            /*marker.addListener('click', function() {
+                map.setZoom(8);
+                map.setCenter(marker.getPosition());
+            });*/
         }
 
         var TILE_SIZE = 256;
 
-        function createInfoWindowContent(latLng, zoom) {
+        /*function createInfoWindowContent(latLng, zoom) {
             var scale = 1 << zoom;
 
             var worldCoordinate = project(latLng);
@@ -88,7 +149,7 @@
                 'Pixel Coordinate: ' + pixelCoordinate,
                 'Tile Coordinate: ' + tileCoordinate
             ].join('<br>');
-        }
+        }*/
 
         // The mapping between latitude, longitude and pixels is defined by the web
         // mercator projection.
@@ -104,5 +165,6 @@
                 TILE_SIZE * (0.5 - Math.log((1 + siny) / (1 - siny)) / (4 * Math.PI)));
         }
     </script>
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTRGK0p4ErH3dZZnbt31ycMe4VgX4-AQE&callback=initMap"></script>
 {% endblock %}

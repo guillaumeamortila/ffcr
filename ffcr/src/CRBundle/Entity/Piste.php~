@@ -222,28 +222,4 @@ class Piste
     {
         return $this->cheese;
     }
-
-    /**
-     * Set courses
-     *
-     * @param \EEMI\CRBundle\Entity\Course $courses
-     *
-     * @return Piste
-     */
-    public function setCourses(\EEMI\CRBundle\Entity\Course $courses = null)
-    {
-        $this->courses = $courses;
-
-        return $this;
-    }
-
-    /**
-     * Get courses
-     *
-     * @return \EEMI\CRBundle\Entity\Course
-     */
-    public function getCourses()
-    {
-        return $this->courses;
-    }
 }
