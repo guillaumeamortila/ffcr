@@ -5,32 +5,9 @@
 {% block content %}
     <h1 class="my-4">Proposez un terrain à l'homologation de la FFCR</h1>
 
-    {{ form_start(newPisteForm, {'attr': {'class': 'form-horizontal'}}) }}
+    {{ form_start(newPisteForm, {'attr': {'class': 'form-horizontal form-piste'}}) }}
     {{ form_errors(newPisteForm) }}
     {{ form_rest(newPisteForm) }}
     {{ form_end(newPisteForm) }}
 
-    <form>
-        <div class="form-group">
-            <label for="nom">Nom</label>
-            <input type="text" name="nom" minlength="3" required placeholder="Nom" class="form-control" id="nom">
-        </div>
-        <div class="form-group">
-            <label for="prenom">Prénom</label>
-            <input type="text" name="prenom" minlength="3" required placeholder="Prénom" class="form-control" id="prenom">
-        </div>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" name="email" minlength="3" required placeholder="Email" class="form-control" id="email">
-        </div>
-        <div class="form-group">
-            <label for="tel">Téléphone</label>
-            <input type="tel" name="tel" minlength="3" required placeholder="Numéro de téléphone" class="form-control" id="tel">
-        </div>
-        <div class="form-group">
-            <label for="adresse">Adresse du terrain</label>
-            <input type="text" name="adresse" minlength="3" required placeholder="tel" class="form-control" id="adresse">
-        </div>
-        <input type="submit" class="btn btn-success form-control mb-5 mt-3">
-    </form>
 {% endblock %}
