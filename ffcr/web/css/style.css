@@ -64,7 +64,6 @@
 
 video{
     min-width: 100%;
-    min-height: 100vh;
 }
 
 #logo{
@@ -95,8 +94,7 @@ video{
     font-family: 'Bangers', cursive;
     font-size: 4rem;
     color: #ffc312;
-    position: relative;
-    top: 40vh;
+    margin-top: calc(100vh - 340px);
     text-align: center;
     letter-spacing: 6px;
     z-index: 3;
@@ -105,6 +103,7 @@ video{
 #hp-container h2 {
     font-family: Bangers;
     letter-spacing: 1px;
+    margin: 50px 0px 20px 0px;
 }
 
 .button{
