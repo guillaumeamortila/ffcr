@@ -11,7 +11,18 @@ class DefaultController extends Controller
         $em = $this->getDoctrine()->getManager();
         $pisteRepo = $em->getRepository('CRBundle:Piste');
 
-        $pistes = $pisteRepo->findAll(['id' => 'desc']);
+
+
+        $pistes = $pisteRepo->findAll(['date' => 'desc']);
+        /*$query = $em->createQuery(
+            'SELECT *
+        FROM CRBundle\Entity\Courses p
+        WHERE p.price > :price
+        ORDER BY p.price ASC'
+        )->setParameter('price', 10);
+
+        // returns an array of Product objects
+        $pistes = $query->execute();*/
 
 
         return $this->render('CRBundle:Default:index.html.twig',[
