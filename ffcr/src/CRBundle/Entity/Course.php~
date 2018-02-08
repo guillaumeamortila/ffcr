@@ -98,28 +98,5 @@ class Course
         return $this->date;
     }
 
-
-    /**
-     * Set piste
-     *
-     * @param \EEMI\DevoirBundle\Entity\Piste $piste
-     *
-     * @return Course
-     */
-    public function setPiste(\EEMI\DevoirBundle\Entity\Piste $piste = null)
-    {
-        $this->piste = $piste;
-
-        return $this;
-    }
-
-    /**
-     * Get piste
-     *
-     * @return \EEMI\DevoirBundle\Entity\Piste
-     */
-    public function getPiste()
-    {
-        return $this->piste;
-    }
 }
+
