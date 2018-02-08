@@ -33,6 +33,18 @@
     color: white;
 }
 
+.header2{
+    width: 60% !important;
+    margin:auto !important;
+}
+
+.header2 a{
+    color: black;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 20px black;
+}
+
 .header{
     width: 60% !important;
     margin:auto !important;
@@ -51,7 +63,9 @@
 }
 
 video{
-    width: 100%;
+    /*min-*/
+    min-width: 100%;
+    /*min-height: 100vh;*/
 }
 
 #logo{
@@ -80,10 +94,27 @@ video{
 
 #h1Home{
     font-family: 'Bangers', cursive;
-    font-size: 5rem;
+    font-size: 4rem;
     color: #ffc312;
     position: relative;
     top: 40vh;
     text-align: center;
     z-index: 3;
+}
+
+.button{
+    color:white;
+    background-color: #ffc312;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.buttonContainer{
+    display: flex;
+}
+
+.button p{
+    position: relative;
+    top:60px;
 }

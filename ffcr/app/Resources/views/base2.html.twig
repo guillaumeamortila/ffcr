@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Cheese Rolling - Fédération Française de Cheese Rolling{% endblock %}</title>
+    {% block head %}{% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/js/jquery-3.2.1.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/tether.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/script.js"></script>
+</head>
+<body>
+<div style="width: auto; margin:auto; text-align: center">
+    <img src="{{ asset('images/logo.png') }}" id="logo">
+</div>
+<div class="header2 flex-around position-relative">
+    <div><a href="{{ url('cr_homepage') }}">Acceuil</a></div>
+    <div><a href="#">Les clubs</a></div>
+    <div><a href="{{ url('cr_terrain') }}">Les terrains</a></div>
+    <div><a href="#">Les tournois</a></div>
+    <div><a href="{{ url('cr_replay') }}">Replay</a></div>
+</div>
+<div class="container">
+    {% block body %}{% endblock %}
+</div>
+<div class="footer flex-around position-relative">
+    <div><a href="#">Qu'est-ce que le cheese rolling ?</a></div>
+    <div><a href="{{ url('cr_search') }}">Les évènements</a></div>
+    <div><a href="{{ url('cr_replay') }}">Les replays</a></div>
+    <div><a href="{{ url('cr_terrain') }}">Soumettre mon terrain</a></div>
+    <div><a href="#">Mention légale</a></div>
+</div>
+</body>
+</html>
