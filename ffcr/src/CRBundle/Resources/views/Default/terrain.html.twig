@@ -5,6 +5,11 @@
 {% block content %}
     <h1 class="my-4">Proposez un terrain à l'homologation de la FFCR</h1>
 
+    {{ form_start(newPisteForm, {'attr': {'class': 'form-horizontal'}}) }}
+    {{ form_errors(newPisteForm) }}
+    {{ form_rest(newPisteForm) }}
+    {{ form_end(newPisteForm) }}
+
     <form>
         <div class="form-group">
             <label for="nom">Nom</label>

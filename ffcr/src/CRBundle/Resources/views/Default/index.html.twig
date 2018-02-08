@@ -5,7 +5,7 @@
 {% block content %}
 
     <div id="map-container">
-        <div id="google-map" style="height:600px;width:360px"></div>
+        <div id="google-map" style="height:400px;width:100%"></div>
         <div>
             <h3>Les courses en France</h3>
         </div>
@@ -21,11 +21,6 @@
                 zoom: 5
             });
 
-            /*var coordInfoWindow = new google.maps.InfoWindow();
-            coordInfoWindow.setContent(createInfoWindowContent(course1, map.getZoom()));
-            coordInfoWindow.setPosition(course1);
-            coordInfoWindow.open(map);*/
-
             /*map.addListener('zoom_changed', function() {
                 coordInfoWindow.setContent(createInfoWindowContent(course1, map.getZoom()));
                 coordInfoWindow.open(map);
@@ -38,11 +33,11 @@
                 {lat: -33.848588, lng: 151.209834}
             ]
 
-            var labels = [
-                "Bg St Maurice",
-                "Course 2",
-                "Course 3",
-                "Course 4"
+            var infoContent = [
+                '<div id="content" class="text-dark"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Boursin Maurice</h1><div id="bodyContent"><p><b>Boursin Maurice</b>, also referred to as <b>Ayers Rock</b>, is a large sandstone rock formation in the southern part of the Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) south west of the nearest large town, Alice Springs; 450&#160;km (280&#160;mi) by road. Kata Tjuta and Uluru are the two major features of the Uluru - Kata Tjuta National Park.<p><a href="/presentation">Voir les détails de la course</a></p></div></div>',
+                '<div id="content" class="text-dark"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Bretagne Vikings</h1><div id="bodyContent"><p><b>Boursin Maurice</b>, also referred to as <b>Ayers Rock</b>, is a large sandstone rock formation in the southern part of the Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) south west of the nearest large town, Alice Springs; 450&#160;km (280&#160;mi) by road. Kata Tjuta and Uluru are the two major features of the Uluru - Kata Tjuta National Park.<p><a href="/presentation">Voir les détails de la course</a></p></div></div>',
+                '<div id="content" class="text-dark"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Boursin Maurice</h1><div id="bodyContent"><p><b>Boursin Maurice</b>, also referred to as <b>Ayers Rock</b>, is a large sandstone rock formation in the southern part of the Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) south west of the nearest large town, Alice Springs; 450&#160;km (280&#160;mi) by road. Kata Tjuta and Uluru are the two major features of the Uluru - Kata Tjuta National Park.<p><a href="/presentation">Voir les détails de la course</a></p></div></div>',
+                '<div id="content" class="text-dark"><div id="siteNotice"></div><h1 id="firstHeading" class="firstHeading">Boursin Maurice</h1><div id="bodyContent"><p><b>Boursin Maurice</b>, also referred to as <b>Ayers Rock</b>, is a large sandstone rock formation in the southern part of the Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) south west of the nearest large town, Alice Springs; 450&#160;km (280&#160;mi) by road. Kata Tjuta and Uluru are the two major features of the Uluru - Kata Tjuta National Park.<p><a href="/presentation">Voir les détails de la course</a></p></div></div>',
             ]
 
             var markers = locations.map(function(location, i) {
@@ -51,7 +46,9 @@
                     //label: labels[i]
                 });
                 marker.addListener('click', function() {
-                    infowindow.open(map, marker);
+                    new google.maps.InfoWindow({
+                        content: infoContent[i]
+                    }).open(map, marker);
                 });
                 return marker;
             });
@@ -59,57 +56,10 @@
             var markerCluster = new MarkerClusterer(map, markers,
                 {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
 
-            var contentString = '<div id="content" class="text-dark">'+
-                '<div id="siteNotice">'+
-                '</div>'+
-                '<h1 id="firstHeading" class="firstHeading">Boursin Maurice</h1>'+
-                '<div id="bodyContent">'+
-                '<p><b>Boursin Maurice</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
-                'sandstone rock formation in the southern part of the '+
-                'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
-                'south west of the nearest large town, Alice Springs; 450&#160;km '+
-                '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
-                'features of the Uluru - Kata Tjuta National Park.'+
-                '<p><a href="/presentation">Voir les détails de la course</a></p>'+
-                '</div>'+
-                '</div>';
 
-            var infowindow = new google.maps.InfoWindow({
-                content: contentString
-            });
-
-
-
-            /*marker.addListener('click', function() {
-                map.setZoom(8);
-                map.setCenter(marker.getPosition());
-            });*/
         }
 
         var TILE_SIZE = 256;
-
-        /*function createInfoWindowContent(latLng, zoom) {
-            var scale = 1 << zoom;
-
-            var worldCoordinate = project(latLng);
-
-            var pixelCoordinate = new google.maps.Point(
-                Math.floor(worldCoordinate.x * scale),
-                Math.floor(worldCoordinate.y * scale));
-
-            var tileCoordinate = new google.maps.Point(
-                Math.floor(worldCoordinate.x * scale / TILE_SIZE),
-                Math.floor(worldCoordinate.y * scale / TILE_SIZE));
-
-            return [
-                'Chicago, IL',
-                'LatLng: ' + latLng,
-                'Zoom level: ' + zoom,
-                'World Coordinate: ' + worldCoordinate,
-                'Pixel Coordinate: ' + pixelCoordinate,
-                'Tile Coordinate: ' + tileCoordinate
-            ].join('<br>');
-        }*/
 
         // The mapping between latitude, longitude and pixels is defined by the web
         // mercator projection.
