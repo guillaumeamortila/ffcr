@@ -185,6 +185,49 @@ video{
 .actu-img img{
     width: 100%;
 }
+<<<<<<< HEAD
+
+#label{
+    background-color: lightgreen;
+    width: 300px;
+    height: 100px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    position: relative;
+    bottom: 300px;
+    left: 50px;
+    vertical-align: center;
+}
+
+#label p{
+    position: relative;
+    top: 20px;
+    right: 5px;
+}
+#callToAction{
+    border: white 5px solid;
+    background-color: #f5d961;
+    width: 130px;
+    border-radius: 100%;
+    height: 130px;
+    position: relative;
+    bottom: 75px;
+    left: 265px;
+    text-align: center;
+    vertical-align: center;
+}
+#callToAction a{
+    position: relative;
+    color: white;
+    top:30px;
+    font-weight: bold;
+}
+
+#callToAction a:hover{
+    text-decoration: none;
+}
+=======
 .actu-ctnr h4{
     margin: 11px 0px;
 }
@@ -192,3 +235,4 @@ video{
     text-align: justify;
     padding: 0 8px;
 }
+>>>>>>> 5b4b846285d36b39cf526800e6f830d10cd6cd36
