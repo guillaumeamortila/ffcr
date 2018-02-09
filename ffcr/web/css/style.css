@@ -314,3 +314,7 @@ video{
     text-align: justify;
     padding: 0 8px;
 }
+.form-piste .button {
+    width: 300px;
+    margin-left: calc(50% - 160px);
+}
