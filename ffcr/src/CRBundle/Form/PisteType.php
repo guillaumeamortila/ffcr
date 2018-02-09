@@ -28,7 +28,7 @@ class PisteType extends AbstractType
             ))
             ->add('description', TextareaType::class, ['label' => false])
             ->add('date', DateType::class, ['label' => false])
-            ->add('Soumettre', SubmitType::class, ['attr' => ['class' => 'form-control btn btn-success']]);
+            ->add('Soumettre', SubmitType::class, ['attr' => ['class' => 'form-control button btn ']]);
 
     }
 

@@ -3,7 +3,8 @@
 {% block title %}{{ parent() }}{% endblock %}
 
 {% block content %}
-    <h1 class="my-4">Proposez une course à l'homologation de la FFCR</h1>
+    <h1 style="font-family: Bangers;letter-spacing: 3px; margin-top: 44px;">Proposez une course à l'homologation de la FFCR</h1>
+    <hr style="border: none; border-bottom: dotted 7px #fbd449">
 
     {{ form_start(newPisteForm, {'attr': {'class': 'form-horizontal form-piste'}}) }}
     {{ form_label(newPisteForm.ville, "Ville, lieu :", {'label_attr': {'class': ''}}) }}
