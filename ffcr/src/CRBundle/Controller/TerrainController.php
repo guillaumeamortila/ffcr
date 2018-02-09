@@ -21,6 +21,7 @@ class TerrainController extends Controller
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($piste);
                 $em->flush();
+                return $this->redirect("/");
             }
         }
 
