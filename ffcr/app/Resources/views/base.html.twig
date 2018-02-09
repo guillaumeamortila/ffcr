@@ -20,13 +20,23 @@
         <div style="width: auto; margin:auto; text-align: center">
             <img src="{{ asset('images/logo.png') }}" id="logo">
         </div>
-        <div class="header flex-around position-relative">
+        <div class="header flex-around" id="header">
             <div><a href="{{ url('cr_homepage') }}">Acceuil</a></div>
             <div><a href="#">Les clubs</a></div>
             <div><a href="{{ url('cr_terrain') }}">Les terrains</a></div>
             <div><a href="#">Les tournois</a></div>
             <div><a href="{{ url('cr_replay') }}">Replay</a></div>
         </div>
+        <div id="headerScroll">
+            <div class="header flex-around">
+                <div><a href="{{ url('cr_homepage') }}">Acceuil</a></div>
+                <div><a href="#">Les clubs</a></div>
+                <div><a href="{{ url('cr_terrain') }}">Les terrains</a></div>
+                <div><a href="#">Les tournois</a></div>
+                <div><a href="{{ url('cr_replay') }}">Replay</a></div>
+            </div>
+        </div>
+
             {% block body %}{% endblock %}
         <div class="footer flex-around position-relative">
             <div><a href="#">Qu'est-ce que le cheese rolling ?</a></div>

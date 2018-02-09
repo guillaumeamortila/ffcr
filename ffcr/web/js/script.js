@@ -25,4 +25,17 @@ $(document).ready( function(){
         }
     }
 
+
+    //var header = document.getElementById('header')
+    var hscroll = document.getElementById('headerScroll');
+
+    window.addEventListener('scroll', function(){
+        console.log(window.pageYOffset)
+        if(window.pageYOffset > 99){
+            //hscroll.style = 'display:flex;';
+        } else {
+            //hscroll.style = 'display:none;';
+        }
+    })
+
 });

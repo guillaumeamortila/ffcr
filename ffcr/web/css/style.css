@@ -47,6 +47,15 @@
 .header{
     width: 60% !important;
     margin:auto !important;
+    position: relative;
+}
+#headerScroll{
+    display:none;
+    background-color: #44484B;
+    position:fixed;
+    top:0px;
+    width: 100%;
+    z-index: 100;
 }
 
 .header a{
@@ -103,14 +112,15 @@ video{
     margin-top: 20px;
     font-family: Bangers;
     letter-spacing: 1px;
-    margin: 50px 0px 20px 0px;
+    margin: 60px 0px 20px 0px;
 }
 
 .button{
     width: 200px;
     height: 50px;
     border-radius: 50px;
-    background-color: #f5d961;
+    background-color: #fbd449;
+    text-shadow: 2px 3px #000;
     color: #FFF;
     font-family:Bangers;
     letter-spacing:2px;
@@ -126,7 +136,7 @@ video{
 }
 
 .buttonContainer{
-    padding: 20px;
+    padding: 16px 30px 26px 30px;
     width: 700px;
     margin:auto;
     display: flex;
@@ -144,6 +154,7 @@ video{
     font-style: italic;
     width: 66%;
     margin-left: 18%;
+    text-align: left;
 }
 #desc-para::first-letter {
     font-size: 1.6em;
@@ -159,7 +170,7 @@ video{
 }
 
 .actu-ctnr{
-    margin: 34px 0 80px 0;
+    margin: 34px 0 90px 0;
 }
 .actu-ctnr > div{
     width: 30%;
@@ -173,6 +184,7 @@ video{
 .actu-img img{
     width: 100%;
 }
+<<<<<<< HEAD
 
 #label{
     background-color: lightgreen;
@@ -214,3 +226,12 @@ video{
 #callToAction a:hover{
     text-decoration: none;
 }
+=======
+.actu-ctnr h4{
+    margin: 11px 0px;
+}
+.actu-ctnr p{
+    text-align: justify;
+    padding: 0 8px;
+}
+>>>>>>> 5b4b846285d36b39cf526800e6f830d10cd6cd36
