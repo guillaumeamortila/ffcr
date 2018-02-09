@@ -82,32 +82,49 @@ video{
     }
     8%  {
         top:0;
+        transform: scale(1);
     }
     10% {
         top:-18px;
+        transform: scale(1.1);
     }
     11.5% {
         top:0;
+        transform: scale(1);
     }
     13% {
         top:-12px;
+        transform: scale(1.08);
     }
     15% {
         top:0;
+        transform: scale(1);
     }
-    50% {
+    52% {
         transform:rotate(0deg);
     }
     68% {
+        transform:rotate(1110deg);
+    }
+    70% {
+        transform:rotate(1072deg);
+    }
+    71% {
         transform:rotate(1080deg);
     }
     80%  {
         top:0;
+        transform: scale(1);
     }
-    81.5% {
+    81.8% {
         top:-8px;
+        transform: scale(1.07);
     }
-    83% {
+    83.4% {
+        top:3px;
+        transform: scale(1);
+    }
+    85% {
         top:0;
     }
     100% {
@@ -119,7 +136,7 @@ video{
     width:100px;
     height: 100px;
     position:relative;
-    animation: logoAnim 15s ease infinite;
+    animation: logoAnim 15s ease-in-out infinite;
 }
 
 .video{
